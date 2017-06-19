@@ -1,0 +1,13 @@
+<input
+  class="input"
+  type="text"
+  placeholder="Username"
+  [(ngModel)]="username"
+  (input)="onUpdateUsername()">
+
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewUser"
+  (click)="onNewUser()">Clear user</button>
+
+<p>{{ username }}</p>

@@ -1,4 +1,29 @@
-<p class="notification">
-  <app-server></app-server>
-  <app-server></app-server>
-</p>
+<div class="notification">
+
+  <div class="block">
+
+    <div class="field">
+      <label class="label">Server name</label>
+      <p class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="Name"
+          [(ngModel)]="serverName">
+      </p>
+    </div>
+
+    <div class="field">
+      <p class="control">
+        <button
+          class="button is-primary"
+          [disabled]="!allowNewServer"
+          (click)="onCreateServer()">Add server</button>
+      </p>
+    </div>
+  </div>
+
+  <p *ngIf="serverCreated" >Server was created, server name is {{ serverName }}</p>
+
+  <app-server *ngFor="let server of servers"></app-server>
+</div>
