@@ -1,0 +1,18 @@
+<div class="columns">
+  <div class="column">
+    <app-shopping-edit></app-shopping-edit>
+  </div>
+</div>
+
+<hr />
+
+<div class="columns">
+  <div class="column">
+    <ul>
+      <a style="cursor: pointer"
+         *ngFor="let ingredient of ingredients">
+        {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
+    </ul>
+  </div>
+</div>
